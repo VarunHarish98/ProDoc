@@ -11,8 +11,7 @@ const ReportComponent = (props: Props) => {
             <fieldset className="border relative grid  gap-6 rounded-lg p-4">
                 <legend className="text-sm font-medium ">Report</legend>
                 <InputFile />
-                <label className="text-sm font-medium">Report Summary</label>
-                <textarea className="w-full h-[40vh] p-2 border-none rounded-lg" placeholder="Data from the report will appear here. For better recommendations please provide patient history and symptoms (if any)"></textarea>
+
                 <Button className="w-full" variant="destructive">Generate Report</Button>
                 <div className="flex justify-center text-xs">
                     Share your thoughts on

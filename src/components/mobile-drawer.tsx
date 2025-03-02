@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Drawer,
     DrawerClose,
@@ -12,15 +14,19 @@ import { Button } from "./ui/button"
 import { MdOutlineSettings } from "react-icons/md";
 import ReportComponent from "./report-component";
 
+type Props = {
+    onReportConfirmation: (data: string) => void
+}
 
-const DrawerComponent = () => {
+
+const DrawerComponent = ({ onReportConfirmation }: Props) => {
     return (
         <Drawer>
-            <DrawerTrigger>
+            <DrawerTrigger className="md:hidden">
                 <MdOutlineSettings />
             </DrawerTrigger>
             <DrawerContent className="h-[80vh]">
-                <ReportComponent />
+                <ReportComponent onReportConfirmation={onReportConfirmation} />
             </DrawerContent>
         </Drawer>
     )
